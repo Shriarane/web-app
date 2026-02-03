@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Briefcase, Heart, Zap, Users, Coffee, GraduationCap, ArrowRight } from "lucide-react";
 import JobApplicationDialog from "@/components/JobApplicationDialog";
 
-// --- New Component for Email Copy Functionality ---
+// --- New Component for Email Copy Functionality     ---
 const EmailCopy = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const [copied, setCopied] = useState(false);
