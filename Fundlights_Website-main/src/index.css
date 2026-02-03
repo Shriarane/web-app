@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary / Accent set to DE1A58 (≈ hsl(341 79% 49%)) */
+    --primary: 341 79% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 20% 95%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 340 14% 90%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 341 79% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 14% 88%;
+    --input: 340 14% 88%;
+    --ring: 341 79% 49%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens - DE1A58 theme */
+    --gold: 341 79% 49%;
+    --gold-light: 341 79% 65%;
+    --gold-dark: 341 79% 40%;
+    --navy: 341 45% 22%;
+    --navy-light: 341 35% 32%;
+    --navy-dark: 341 50% 15%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(341 79% 49%), hsl(341 79% 40%));
+    --gradient-navy: linear-gradient(135deg, hsl(341 45% 22%), hsl(341 50% 15%));
+    --gradient-hero: linear-gradient(180deg, hsl(341 20% 98%) 0%, hsl(341 25% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(341 25% 98%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(341 45% 22% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(341 45% 22% / 0.15);
+    --shadow-gold: 0 8px 30px -6px hsl(341 79% 49% / 0.35);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 341 79% 49%;
+  }
+
+  .dark {
+    --background: 222 65% 8%;
+    --foreground: 220 20% 95%;
+
+    --card: 222 55% 12%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 222 55% 12%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 341 79% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 341 45% 18%;
+    --secondary-foreground: 220 20% 95%;
+
+    --muted: 341 40% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 341 79% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 341 40% 22%;
+    --input: 341 40% 22%;
+    --ring: 341 79% 49%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 341 60% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 341 40% 16%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 341 40% 16%;
+    --sidebar-ring: 341 79% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Increase base font size slightly for better readability */
+    font-size: 18px;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', 'Outfit', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Slightly scale headings for improved hierarchy */
+  h1 { font-size: 2.6rem; line-height: 1.05; }
+  h2 { font-size: 1.9rem; line-height: 1.1; }
+  h3 { font-size: 1.4rem; line-height: 1.2; }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+  
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+  
+  .bg-gradient-navy {
+    background-image: var(--gradient-navy);
+  }
+  
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
