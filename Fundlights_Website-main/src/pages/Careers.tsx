@@ -32,7 +32,7 @@ const EmailCopy = () => {
         {email}
       </span>
 
-      {/* The "Copy" Tooltip */}
+      {/* The "Copy"   Tooltip */}
       <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded shadow-lg transition-opacity duration-200 ${showTooltip ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         {copied ? "Copied! ✅" : "Copy"}
         
